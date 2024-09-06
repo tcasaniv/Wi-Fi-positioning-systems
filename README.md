@@ -6,7 +6,7 @@ Posicionamiento Interno por WiFi usando varios Access Points WiFi y una app Andr
 
 La app Android muestra la información de la red WiFi actual al presionar **Escanear red WiFi Actual**.
 
-Con el botón **Obtener RSSI de varias redes** lista las redes WiFi disponibles junto a su nivel de potencia RSSI.
+La app Android muestra la información de varios Access Points al presionar **Escanear redes WiFi** junto a su nivel de potencia RSSI.
 
 Se puede enviar las mediciones RSSI de varios Access Points a la URL especificada.
 
