@@ -41,8 +41,7 @@ class ScanWiFiNetworksFragment : Fragment() {
     private lateinit var wifiScanReceiver: BroadcastReceiver
 
     private var jsonData = ""
-    var celda = (2*10000+13*100+13).toString()
-
+    private var tempData: List<WifiScanResultWithExtras> = listOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -153,15 +152,15 @@ class ScanWiFiNetworksFragment : Fragment() {
         SimpleDateFormat(TIME_STAMP_FORMAT, Locale.US).format(date)
 
     data class WifiScanResultWithExtras(
-        val ssid: String,
-        val bssid: String,
-        val level: String,
-        val frequency: String,
-        val capabilities: String,
-        val timestamp: String,
-        val celdaX: String,
-        val celdaY: String,
-        val celdaZ: String
+        var ssid: String,
+        var bssid: String,
+        var level: String,
+        var frequency: String,
+        var capabilities: String,
+        var timestamp: String,
+        var celdaX: String,
+        var celdaY: String,
+        var celdaZ: String
     )
 
 
@@ -186,6 +185,8 @@ class ScanWiFiNetworksFragment : Fragment() {
                 celdaZ = binding.editTextCeldaZ.text.toString()
             )
         }
+
+        tempData = wifiResultsWithExtras
 
         // Mostrar resultados en la tabla
         wifiResultsWithExtras.forEach { result ->
@@ -214,7 +215,7 @@ class ScanWiFiNetworksFragment : Fragment() {
 //            )
 //        }
 
-        jsonData = Gson().toJson(wifiManager.scanResults)  // Convert results to JSON
+        jsonData = Gson().toJson(tempData)  // Convert results to JSON
 
         binding.sendButton.visibility = View.VISIBLE
     }
