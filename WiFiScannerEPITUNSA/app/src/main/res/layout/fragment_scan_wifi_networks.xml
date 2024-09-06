@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8sp"
+    android:orientation="vertical"
+    tools:context=".ui.scan_wifi_networks.ScanWiFiNetworksFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/scanButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:text="@string/menu_scan_wifi_networks" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:text="@string/send_data"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_scan_wifi_networks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8sp"
+                android:padding="8sp"
+                android:text="@string/info_scan_wifi_networks"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:stretchColumns="*">
+
+                <!-- Fila de encabezados -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celda X (m)"
+                        android:gravity="center"
+                        android:layout_marginEnd="0dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celda Y (m)"
+                        android:gravity="center"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="0dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Celda Z (m)"
+                        android:gravity="center"
+                        android:layout_marginStart="0sp" />
+                </TableRow>
+
+                <!-- Fila con los campos EditText para ingresar X, Y, Z -->
+                <TableRow>
+                    <EditText
+                        android:id="@+id/editTextCeldaX"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:hint="0"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/editTextCeldaY"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:hint="0"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/editTextCeldaZ"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:hint="0"
+                        tools:ignore="HardcodedText" />
+                </TableRow>
+
+            </TableLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TableLayout
+                    android:id="@+id/wifiNetworksTableLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1" />
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

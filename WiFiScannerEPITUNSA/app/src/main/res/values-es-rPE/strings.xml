@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WiFi Scanner (EPIT UNSA)</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="nav_header_desc">Encabezado de navegación</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="menu_home">Mediciones</string>
+    <string name="menu_scan_wifi">Escanear red WiFi actual</string>
+    <string name="menu_scan_wifi_networks">Escanear redes WiFi</string>
+    <string name="updateURL">Actualizar URL</string>
+    <string name="url_to_send_data">Coloca una URL a donde enviar los datos</string>
+    <string name="info_scan_wifi_networks">Escanea las redes WiFi y muestra los Puntos de Acceso con su nivel RSSI.</string>
+    <string name="location_permit_refused">Permiso de ubicación denegado</string>
+    <string name="scan_failed">Escaneo fallido</string>
+    <string name="header_signal_strength">Intensidad de la señal</string>
+    <string name="header_frequency">Frecuencia</string>
+    <string name="header_capabilities">Capacidades</string>
+    <string name="info_scan_wifi">Escanea la red WiFi conectada</string>
+    <string name="without_wifi">WiFi no conectado</string>
+    <string name="isHiddenSSID">SSID oculto</string>
+    <string name="capabilities">Capacidades</string>
+    <string name="updatedURL">URL actualizada</string>
+    <string name="cancel">Cancelar</string>
+    <string name="wifi_throttling_off">La aceleración del escaneo de Wi-Fi está deshabilitada</string>
+    <string name="wifi_throttling_on">La aceleración del escaneo de Wi-Fi está habilitada</string>
+    <string name="about">Acerca de</string>
+    <string name="about_description_title">Descripción:</string>
+    <string name="about_description_text">Escanea la red y obtén el RSSI de los puntos de acceso. Usado para \"Posicionamiento Interno por WiFi\" usando varios Access Points WiFi y la app Android para tomar mediciones de RSSI.</string>
+    <string name="about_license_title">Licencia:</string>
+    <string name="send_data">Enviar datos</string>
+    <string name="successfully_submitted">Enviado correctamente</string>
+    <string name="error_sending">Error al enviar</string>
+</resources>
